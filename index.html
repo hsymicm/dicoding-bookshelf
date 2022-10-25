@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css">
+    <title>Bookshelf App - Dicoding</title>
+</head>
+<body>
+    <div id="edit-dialog" class="dialog">
+        <div class="card dialog-content">
+            <div class="card-title dialog-title">
+                <h3>Edit Book</h3>
+                <img id="close-edit-dialog" style="cursor: pointer;" src="./assets/img/xmark-solid.svg" width="16px">
+            </div>
+            <div class="input">
+                <label for="edit-book-title">
+                    Title
+                </label>
+                <input type="text" id="edit-book-title">
+            </div>
+            <div class="input">
+                <label for="edit-book-author">
+                    Author
+                </label>
+                <input type="text" id="edit-book-author">
+            </div>
+            <div class="input">
+                <label for="edit-book-year">
+                    Year
+                </label>
+                <input type="text" id="edit-book-year">
+            </div>
+            <div style="margin-top: 24px;" class="button-book">
+                <button id="edit-confirm" class="btn btn-primary">Save</button>
+                <button id="edit-cancel" style="margin-left: 12px;" class="btn btn-secondary">Cancel</button>
+            </div>
+        </div>
+    </div>
+    <div id="delete-dialog" class="dialog">
+        <div class="card dialog-content">
+            <div class="card-title dialog-title">
+                <h3>Confirm Delete</h3>
+                <img id="close-delete-dialog" style="cursor: pointer;" src="./assets/img/xmark-solid.svg" width="16px">
+            </div>
+            <p id="delete-text">Are you sure?</p>
+            <div style="margin-top: 24px;" class="button-book">
+                <button id="delete-cancel" class="btn btn-secondary">Cancel</button>
+                <button id="delete-confirm" style="margin-left: 12px;" class="btn btn-primary">Delete</button>
+            </div>
+        </div>
+    </div>
+    <header class="container">
+        <div class="nav-bar">
+            <h1>Bookshelf</h1>
+            <img id="new-book" class="btn add-btn" src="./assets/img/plus-solid.svg" width="24px">
+        </div>
+    </header>
+    <main class="container">
+        <div class="content">
+            <div id="add-card" class="card invisible">
+                <h2 class="card-title">Add Your New Book</h2>
+                <div class="input">
+                    <label for="input-book-title">
+                        Title
+                    </label>
+                    <input type="text" id="input-book-title">
+                </div>
+                <div class="input">
+                    <label for="input-book-author">
+                        Author
+                    </label>
+                    <input type="text" id="input-book-author">
+                </div>
+                <div class="input">
+                    <label for="input-book-year">
+                        Year
+                    </label>
+                    <input type="text" id="input-book-year">
+                </div>
+                <div class="input-inline">
+                    <label style="margin-right: 8px" for="input-book-finished">Finished Reading</label>
+                    <input style="cursor: pointer;" id="input-book-finished" type="checkbox">
+                </div>
+                <div class="inline-btn">
+                    <button style="margin-right: 8px;" id="input-book-submit" class="btn btn-primary">Add Book</button>
+                    <button id="input-book-cancel" class="btn btn-secondary">Cancel</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="input search-input">
+                    <input id="input-book-search" style="border-top-right-radius: 0;" type="text" placeholder="Search for Your Book...">
+                    <button id="btn-search" class="btn btn-primary">Search</button>
+                </div>
+                <div class="empty-shelf">
+                    <img src="./assets/img/no-data.png" alt="no data" style="width: 50%;">
+                    <h4>It's still empty, go add some books!</h4>
+                </div>
+                <div id="shelf" class="card invisible">
+                    <h3 class="card-title">Reading</h3>
+                    <div id="data-reading"></div>
+                </div>
+                <div id="shelf" class="card invisible">
+                    <h3 class="card-title">Finished Reading</h3>
+                    <div id="data-finished-reading"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="container">
+        <p class="card">Made by <span>Fadil Hisyam</span></p>
+    </footer>
+    <script src="./assets/script.js"></script> 
+</body>
+</html>
